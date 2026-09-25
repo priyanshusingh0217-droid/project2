@@ -132,14 +132,11 @@ app.use("/listings", listingRouter);
 // Review routes
 app.use("/listings/:id/reviews", reviewRouter);
 
-
 // ================= HOME ROUTE =================
 
-// app.get("/", (req, res) => {
-//     res.send("hii today i am make web page finaly");
-// });
-
-
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
 // ================= ERROR HANDLING =================
 
 app.use((err, req, res, next) => {
